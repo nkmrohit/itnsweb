@@ -1,0 +1,38 @@
+{% extends 'backend.html'%}
+{% load static %}
+{% block pageName %} Capability Create {% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-lg-12">
+      <section class="panel">
+        <header class="panel-heading">
+            <h2>Services form </h2>
+            {{error}}
+        </header>
+        <div class="panel-body">
+          <div class="form">
+            <form id="Login" novalidate="novalidate" class="form-validate form-horizontal" method="POST" action="{% url 'SerCreate' %}?id={{id}}" enctype="multipart/form-data">
+                          
+                    {% csrf_token %}
+                    {% for field in form %}
+                        <div class="form-group">
+                            {{ field.errors }}  
+                            <label for="cname" class="control-label col-lg-2">{{ field.label_tag }}<span class="required">*</span></label>
+                            <div class="col-lg-10">{{ field }}</div>
+                            <p class="help">{{ field.help_text|safe }}</p>
+                        </div>
+                    {% endfor %}
+                    
+                    <div class="form-group">
+                        <div class="col-lg-offset-2 col-lg-10">
+                            <button type="submit" class="btn btn-primary">Create</button>                        </div>
+                      </div>
+
+            </form>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+  {% endblock %}

@@ -1,0 +1,132 @@
+{% extends 'frontend.html' %}
+{% load static %}
+{% block content%}
+
+<section id="inner-headline">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="pageTitle">Ananlyse Any Websites or App</h2>
+		</div>
+	</div>
+</div>
+</section>
+<section id="content">
+	<div class="container content">		
+			<!-- Service Blcoks -->
+		
+					<div class="row"> 
+						<div class="col-md-12">
+							<div class="about-logo">
+								<h3>Our Best <span class="color">Server Detail</span></h3>
+								<p>Sed ut perspiciaatis unde omnis iste natus error sit voluptateatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas</p>
+								<p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem s et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas</p>
+							</div>  
+						</div>
+					</div>
+					 
+								 <div class="row">
+	<div class="skill-home"> <div class="skill-home-solid clearfix"> 
+	<div class="col-md-4 text-center">
+	<span class="icons c1"><i class="fa fa-book"></i></span> <div class="box-area">
+	<h3>Server Detail </h3> 
+		<p><b>Domain Name</b> :  {{domains.domain_name}}</p>
+		<p><b>Registrar</b>   :  {{domains.registrar}}</p>
+		<p><b>Whois Server</b>:  {{domains.whois_server}}</p>
+		<p><b>Referral Url</b> :  {{domains.referral_url}}</p>
+		<p><b>Updated Date</b> :  
+
+			{%  for dateup in domains.updated_date %}
+				{{dateup}}<br>
+			{% endfor %}
+		</p>
+		<p><b>Creation Date</b> :  {{domains.creation_date}}</p>
+		<p><b>Expiration Date</b> :  {{domains.expiration_date}}</p>
+		
+		
+	</div>
+	</div>
+	<div class="col-md-4 text-center"> 
+	<span class="icons c2"><i class="fa fa-users"></i></span> <div class="box-area">
+	<h3> Server Address </h3> 
+		<p><b>Address</b> :  
+
+			{%  for Add in domains.address %}
+				{{Add}}<br>
+			{% endfor %}
+		</p>
+		<p><b>City</b> :  {{domains.city}}</p>
+		<p><b>State</b> :  {{domains.state}}</p>
+		<p><b>Zipcode</b> :  {{domains.zipcode}}</p>
+		<p><b>Country</b> :  {{domains.country}}</p>
+		<p><b>Emails</b> :  
+
+			{%  for email in domains.emails %}
+				{{email}}<br>
+			{% endfor %}
+		</p>
+	</div>
+	</div>
+	<div class="col-md-4 text-center"> 
+	<span class="icons c2"><i class="fa fa-users"></i></span> <div class="box-area">
+	<h3>Website Ranking</h3> 
+	<h5><u>Alexa Ranking</u></h5> 
+		<p><b>Global Rank</b> : {{alexa.POPULARITY.TEXT}}</p>
+		<p><b>Reach Rank</b> : {{alexa.REACH.RANK}}</p>
+		<p><b>Delta Rank</b> : {{alexa.RANK.DELTA}}</p>
+	<h5><u>Google Ranking</u></h5> 	
+	</div>
+	</div>
+	{{pageError}}
+
+
+	</div></div>
+	</div> 
+							<!-- Info Blcoks -->
+		<div class="row">
+			{% for pagedata in pageError %}
+			{% if pagedata.url %}
+				<div class="col-sm-12 info-blocks">
+					<i class="icon-info-blocks fa fa-bell-o"></i>
+					<div class="info-blocks-in">
+						
+							<h3>{{pagedata.url}}</h3>
+							<p><b>Title</b> : {{pagedata.title}}</p>
+							<p><b>Description</b> : {{pagedata.description}}</p>
+							<p><b>warnings</b> : {{pagedata.warnings}}</p>
+
+					</div>
+				</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+			<!-- End Info Blcoks -->
+
+		 
+			
+			<div class="row service-v1 margin-bottom-40">
+					<div class="col-md-4 md-margin-bottom-40">
+						 <img class="img-responsive" src="/static/frontend/img/service1.jpg" alt="">   
+							<h3>General Checkup</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
+					</div>
+					<div class="col-md-4">
+							<img class="img-responsive" src="/static/frontend/img/service2.jpg" alt="">            
+							<h3>Heart Consultant</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
+					</div>
+					<div class="col-md-4 md-margin-bottom-40">
+						<img class="img-responsive" src="/static/frontend/img/service3.jpg" alt="">  
+							<h3>Nutrituion</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
+					</div>
+			</div>
+			<!-- End Service Blcoks -->
+
+	 
+
+
+	</div>
+	</section>
+
+		{% endblock %}	

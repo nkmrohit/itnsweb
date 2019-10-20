@@ -1,0 +1,223 @@
+{% extends 'frontend.html' %}
+{% load static %}
+{% block content%}
+<section id="banner">
+	 
+	<!-- Slider -->
+        <div id="main-slider" class="flexslider">
+            <ul class="slides">
+                {% for slider in sliderData %}
+              <li>
+                <img src="media/{{slider.image}}" height="450px" alt="" />
+                <div class="flex-caption">
+                    <h3>&nbsp;</h3> 
+					<p>&nbsp;</p> 
+					 
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+        </div>
+	<!-- end slider -->
+ 
+	</section> 
+	<section id="call-to-action-2">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-sm-9">
+					<h3>ITNS Group Goal</h3>
+					<p>Our mission is to develop a standardized approach, guidance, and tools that help decrease the failure rates of software projects, and encourage companies to adopt these. </p>
+				</div>
+				<div class="col-md-2 col-sm-3">
+					<a href="#" class="btn btn-primary">Read More</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="content">
+	
+	
+	<div class="container">
+	    	<div class="row">
+			<div class="col-md-12">
+				<div class="aligncenter"><h2 class="aligncenter">Our Services</h2>With our 7+ years experience and many more successful projects, We utilize Artificial Intelligence (AI) to develop intelligent, smart and result-oriented AI solutions to boost the productivity of your businesses,
+				while saving your time and money.</div>
+				<br/>
+			</div>
+		</div>
+
+	 <div class="row">
+      {% for services in servicesData %}
+				<div class="col-sm-4 info-blocks">
+					<img  style = "float: left;" class="icon-info-blocks fa fa-html5" src="media/{{services.image}}" height="50px">
+						<div class="info-blocks-in">
+								<h3>{{services.name}}</h3>
+								<p>{{services.description}}</p>
+						</div>
+				</div>
+			{% endfor %}
+
+        </div>
+	</div>
+	</section>
+	
+	<section class="section-padding gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title text-center">
+						<h2>Our Organization</h2>
+						<p>ITNS Group (India) is a global leader in technology and outsourcing solutions. We provide enterprises with strategic insights on what lies ahead and help them transform and thrive in a changing world. We enable clients to stay ahead of the competition and the innovation curve.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="about-text">
+						<p>We service small, medium, and large enterprises for all their IT and IT-related needs. We have a special interest in working with start-ups. With the experience and knowledge we have, we can make it possible for new and budding business to meet their requirements at a low cost, without compromising on quality.</p>
+						<h4>Our Organization Dealing With:</h4>
+						<ul class="withArrow">
+							<li><span class="fa fa-angle-right"></span> Python </li>
+							<li><span class="fa fa-angle-right"></span> Django</li>
+							<li><span class="fa fa-angle-right"></span> Data Science</li>
+							<li><span class="fa fa-angle-right"></span> Machine Learing</li>
+							<li><span class="fa fa-angle-right"></span> PHP </li>
+							<li><span class="fa fa-angle-right"></span> Wordpress, Joomla </li>
+							<li><span class="fa fa-angle-right"></span> Magento </li>
+							<li><span class="fa fa-angle-right"></span> YII2, Zend </li>
+							<li><span class="fa fa-angle-right"></span> Html, HTML5, Css, Js </li>
+						</ul>
+						
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="about-image">
+						<img src="static/frontend/img/about.jpg" alt="About Images">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>	  
+	
+	
+	<div class="about home-about">
+				<div class="container">
+						
+						<div class="row">
+							<div class="col-md-4">
+								<!-- Heading and para -->
+								<div class="block-heading-two">
+									<h3><span>Programes</span></h3>
+								</div>
+								<p>ITns group is proving following training</p>
+								<p>1) Machine Learing (ML)</p>
+								<p>2) Deep Learing </p>
+								<p>3) Python framework ( Django ) </p>
+								<p>4) Core PHP</p>
+								<p>5) Magento</p>
+								<p>6) Wordpress</p>
+								<p>7) Joomla</p>
+								<p>8) YII2 Framework</p>
+								<p>9) Zend Framework</p>
+								<p>9) CI</p>
+							</div>
+							
+							<div class="col-md-4">
+								<div class="block-heading-two">
+									<h3><span>Latest News</span></h3>
+								</div>		
+								<!-- Accordion starts -->
+								<div class="panel-group" id="accordion-alt3">
+								 <!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
+								  <div class="panel">	
+									<!-- Panel heading -->
+									 <div class="panel-heading">
+										<h4 class="panel-title">
+										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3">
+											<i class="fa fa-angle-right"></i> Accordion Heading Text Item # 1
+										  </a>
+										</h4>
+									 </div>
+									 <div id="collapseOne-alt3" class="panel-collapse collapse">
+										<!-- Panel body -->
+										<div class="panel-body">
+										  Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+										</div>
+									 </div>
+								  </div>
+								  <div class="panel">
+									 <div class="panel-heading">
+										<h4 class="panel-title">
+										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3">
+											<i class="fa fa-angle-right"></i> Accordion Heading Text Item # 2
+										  </a>
+										</h4>
+									 </div>
+									 <div id="collapseTwo-alt3" class="panel-collapse collapse">
+										<div class="panel-body">
+										  Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+										</div>
+									 </div>
+								  </div>
+								  <div class="panel">
+									 <div class="panel-heading">
+										<h4 class="panel-title">
+										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
+											<i class="fa fa-angle-right"></i> Accordion Heading Text Item # 3
+										  </a>
+										</h4>
+									 </div>
+									 <div id="collapseThree-alt3" class="panel-collapse collapse">
+										<div class="panel-body">
+										  Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+										</div>
+									 </div>
+								  </div>
+								  <div class="panel">
+									 <div class="panel-heading">
+										<h4 class="panel-title">
+										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
+											<i class="fa fa-angle-right"></i> Accordion Heading Text Item # 4
+										  </a>
+										</h4>
+									 </div>
+									 <div id="collapseFour-alt3" class="panel-collapse collapse">
+										<div class="panel-body">
+										  Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+										</div>
+									 </div>
+								  </div>
+								</div>
+								<!-- Accordion ends -->
+								
+							</div>
+							
+							<div class="col-md-4">
+								<div class="block-heading-two">
+									<h3><span>Testimonials</span></h3>
+								</div>	
+								     <div class="testimonials">
+										<div class="active item">
+										  <blockquote><p>Lorem ipsum dolor met consectetur adipisicing. Aorem psum dolor met consectetur adipisicing sit amet, consectetur adipisicing elit, of them jean shorts sed magna aliqua. Lorem ipsum dolor met.</p></blockquote>
+										  <div class="carousel-info">
+											<img alt="" src="'frontend/img/team4.jpg'" class="pull-left">
+											<div class="pull-left">
+											  <span class="testimonials-name">Marc Cooper</span>
+											  <span class="testimonials-post">Technical Director</span>
+											</div>
+										  </div>
+										</div>
+									</div>
+							</div>
+							
+						</div>
+						
+						 						
+						 
+						<br>
+					 
+					  </div>
+						
+					</div>
+		{% endblock %}	

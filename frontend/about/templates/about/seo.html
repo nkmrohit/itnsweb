@@ -1,0 +1,22 @@
+{% extends 'frontend.html' %}
+{% load static %}
+{% block content%}
+<section id="inner-headline">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="pageTitle">About Us</h2>			
+			{% for datas in seoData %}
+				{% if datas.url %}
+					<p>&nbsp;&nbsp;<strong> Pages</strong>: {{ datas.url }}</p>
+					<p>&nbsp;&nbsp;<b>Title</b>:  {{ datas.title }}</p>
+					<p>&nbsp;&nbsp;<b>Description</b>: {{ datas.description }}</p>
+					<p>&nbsp;&nbsp;<b>keywords</b>: {{ datas.keywords }}</p>
+					<p>&nbsp;&nbsp;<b>warnings</b>: {{ datas.warnings }}</p>
+				{% endif %}
+			{% endfor %}			
+		</div>
+	</div>
+</div>
+</section>
+{% endblock %}	
